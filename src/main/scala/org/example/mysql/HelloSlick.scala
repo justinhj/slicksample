@@ -1,15 +1,14 @@
+package org.example.mysql
 
 import com.zaxxer.hikari.{HikariConfig, HikariDataSource}
 import org.slf4j.LoggerFactory
 import slick.jdbc.MySQLProfile.api._
 import slick.util.AsyncExecutor
-import scala.language.postfixOps
-import scala.concurrent.duration.DurationInt
-import scala.concurrent.{Await, ExecutionContext}
-import scala.util.{Failure, Success, Try}
 
-// Test DB
-// docker run --name mysql1 -e MYSQL_ROOT_PASSWORD="yay" -e MYSQL_USER="yay" -e MYSQL_PASSWORD="yay" -p 3306:3306 -d mysql:latest
+import scala.concurrent.Await
+import scala.concurrent.duration.DurationInt
+import scala.language.postfixOps
+import scala.util.{Failure, Success, Try}
 
 object HelloSlick extends App {
 
